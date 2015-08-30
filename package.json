@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "description": "A CLI tool for running command shortcuts.",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "bin": {
+    "zx": "index.js"
   },
   "repository": {
     "type": "git",
@@ -27,5 +27,11 @@
   "homepage": "https://github.com/zkochan/zx#readme",
   "publishConfig": {
     "registry": "http://registry.npmjs.org"
+  },
+  "dependencies": {
+    "commander": "^2.8.1",
+    "exec-cmds": "^0.2.0",
+    "update-notifier": "^0.5.0",
+    "yaml-or-json": "^0.1.0"
   }
 }
