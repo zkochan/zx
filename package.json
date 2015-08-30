@@ -1,0 +1,31 @@
+{
+  "name": "zx",
+  "version": "0.0.0",
+  "description": "A CLI tool for running command shortcuts.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zkochan/zx.git"
+  },
+  "keywords": [
+    "exec",
+    "commands",
+    "shortcuts"
+  ],
+  "author": {
+    "name": "Zoltan Kochan",
+    "email": "zoltan.kochan@gmail.com",
+    "url": "http://kochan.io"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zkochan/zx/issues"
+  },
+  "homepage": "https://github.com/zkochan/zx#readme",
+  "publishConfig": {
+    "registry": "http://registry.npmjs.org"
+  }
+}
