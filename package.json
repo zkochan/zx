@@ -29,9 +29,10 @@
     "registry": "http://registry.npmjs.org"
   },
   "dependencies": {
-    "commander": "^2.8.1",
     "exec-cmds": "^0.2.0",
+    "shell-quote": "^1.4.3",
     "update-notifier": "^0.5.0",
-    "yaml-or-json": "^0.1.0"
+    "yaml-or-json": "^0.1.0",
+    "yargs": "^3.31.0"
   }
 }
