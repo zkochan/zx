@@ -25,6 +25,17 @@ run: node server
 reminify:
   - rm -rf dist
   - gulp minify
+
+# You can also optionally specify the working directory of the command
+minify:
+  cwd: ./my-project
+  command: gulp minify
+
+# or set some environment variables for the child process
+minify:
+  env:
+    NODE_ENV: production
+  command: gulp minify
 ```
 
 Execute the shortcuts by running `zx` and the name of the shortcut in the console. E.g.: `zx minify`.

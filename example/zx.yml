@@ -1,0 +1,5 @@
+foo:
+  cwd: .
+  env:
+    FOO_BAR: 'Hello world!'
+  command: node write-env

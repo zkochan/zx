@@ -51,11 +51,31 @@ if (!shortcuts[cmd]) {
   return;
 }
 
-var cmds = typeof shortcuts[cmd] === 'string' ? [shortcuts[cmd]] : shortcuts[cmd];
+function parseShortcut(shortcut) {
+  if (typeof shortcut === 'string') {
+    return {
+      command: [shortcut],
+    };
+  }
 
-// append args to the end of the command, but only if there is only one
-if ( cmds.length === 1 && args.length ) {
-  cmds[0] += ' ' + shellquote(args);
+  if (shortcut instanceof Array) {
+    return {
+      command: shortcut,
+    };
+  }
+
+  if (typeof shortcut.command === 'string') {
+    shortcut.command = [shortcut.command];
+  }
+
+  return shortcut;
 }
 
-execCmds(cmds);
+var cmdsSeq = parseShortcut(shortcuts[cmd]);
+
+// append args to the end of the command, but only if there is only one
+if ( cmdsSeq.command.length === 1 && args.length ) {
+  cmdsSeq.command[0] += ' ' + shellquote(args);
+}
+
+execCmds(cmdsSeq.command, cmdsSeq);
