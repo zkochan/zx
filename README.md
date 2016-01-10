@@ -9,7 +9,7 @@ A CLI tool for running command shortcuts.
 
 ## Installation
 
-```js
+```
 npm install -g zx
 ```
 

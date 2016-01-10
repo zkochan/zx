@@ -3,6 +3,9 @@
   "version": "0.1.2",
   "description": "A CLI tool for running command shortcuts.",
   "main": "index.js",
+  "files": [
+    "index.js"
+  ],
   "bin": {
     "zx": "index.js"
   },

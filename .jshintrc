@@ -2,7 +2,6 @@
   "node": true,
   "browser": true,
   "esnext": true,
-  "expr": true,
   "bitwise": false,
   "camelcase": true,
   "eqeqeq": true,
@@ -19,8 +18,12 @@
   "quotmark": "single",
   "maxlen": 80,
   "trailing": true,
-  "curly": true,
+  "expr": true,
+  "curly": false,
+  "asi": true,
   "globals": {
+    "jasmine": true,
+    "ApplicationConfiguration": true
   },
   "predef": [
     "define",

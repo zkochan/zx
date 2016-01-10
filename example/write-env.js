@@ -1,3 +1,2 @@
-'use strict';
-
-console.log(process.env.FOO_BAR);
+'use strict'
+console.log(process.env.FOO_BAR)
