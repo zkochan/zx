@@ -32,10 +32,15 @@
     "registry": "http://registry.npmjs.org"
   },
   "dependencies": {
-    "exec-cmds": "^1.0.1",
+    "chalk": "^1.1.1",
+    "npm-run": "^2.0.0",
+    "parse-spawn-args": "^1.0.2",
     "shell-quote": "^1.4.3",
     "update-notifier": "^0.5.0",
     "yaml-or-json": "^0.2.0",
     "yargs": "^3.31.0"
+  },
+  "devDependencies": {
+    "plato": "^1.5.0"
   }
 }

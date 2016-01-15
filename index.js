@@ -6,7 +6,7 @@ const updateNotifier = require('update-notifier')
 const yamlOrJSON = require('yaml-or-json')
 const path = require('path')
 const shellquote = require('shell-quote').quote
-const execCmds = require('exec-cmds')
+const execCmds = require('./lib/exec-cmds')
 
 let args = process.argv.slice(2)
 

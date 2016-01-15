@@ -1,0 +1,1 @@
+plato: "plato -d ./plato ./lib/**/*.js"
