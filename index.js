@@ -45,6 +45,14 @@ try {
 }
 
 if (!shortcuts) {
+  try {
+    shortcuts = require(currentDir + '/package.json').zx;
+  } catch (e) {
+    shortcuts = false
+  }
+}
+
+if (!shortcuts) {
   console.log('zx config file not found or empty')
   return
 }
@@ -57,18 +65,18 @@ if (!shortcuts[cmd]) {
 function parseShortcut(shortcut) {
   if (typeof shortcut === 'string') {
     return {
-      command: [shortcut],
+      cmd: [shortcut],
     }
   }
 
   if (shortcut instanceof Array) {
     return {
-      command: shortcut,
+      cmd: shortcut,
     }
   }
 
-  if (typeof shortcut.command === 'string') {
-    shortcut.command = [shortcut.command];
+  if (typeof shortcut.cmd === 'string') {
+    shortcut.cmd = [shortcut.cmd];
   }
 
   return shortcut
@@ -77,8 +85,8 @@ function parseShortcut(shortcut) {
 let cmdsSeq = parseShortcut(shortcuts[cmd])
 
 // append args to the end of the command, but only if there is only one
-if (cmdsSeq.command.length === 1 && args.length) {
-  cmdsSeq.command[0] += ' ' + shellquote(args)
+if (cmdsSeq.cmd.length === 1 && args.length) {
+  cmdsSeq.cmd[0] += ' ' + shellquote(args)
 }
 
-execCmds(cmdsSeq.command, cmdsSeq)
+execCmds(cmdsSeq.cmd, cmdsSeq)
